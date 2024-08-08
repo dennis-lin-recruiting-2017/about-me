@@ -24,7 +24,5 @@ You can watch the video demo on YouTube here: [Link](https://youtu.be/O80CD8Fz40
 I created a tool that creates UI verification tests from uploaded video.  The tool comes with a web-based interface to
 create the UI test with.
 
-You can explore the video and processing results here: [Link to GitHub files](https://www.github.com)
-
-You can watch the video demon on YouTube here: [Link - to be added](https://youtube.com)
+You can watch the video demon on YouTube here: [Link](https://youtu.be/UsMLAnpqFP8)
 
