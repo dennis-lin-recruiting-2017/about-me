@@ -1,37 +1,25 @@
-# About Me
+# about-me
 
-Hi there!  My name is Dennis, and I've been a software engineer working in the Silicon Valley for a number of years now.
-I'm a very intellectually curious person, and I've listed a few personal projects that I've recently worked on here. I
-hope you enjoy them!
+A React + TypeScript + MUI template app using `HashRouter` and a 2-level left drawer menu.
 
+## Structure
 
+- `src/components/Header.tsx`
+- `src/components/AppDrawer.tsx`
+- `src/pages/Home.tsx`
+- `src/pages/Projects.tsx`
+- `src/pages/Project1.tsx`
+- `src/pages/Project2.tsx`
 
-#  Projects
+## Run
 
-## Browser Extension that Creates Visual Test Cases
+```bash
+npm install
+npm run dev
+```
 
-This browser extension allows the user to visually author cross-browser UI tests for their web interfaces.  The visual
-test cases are stored on a server and can be sent to a backend that can run the tests asynchronously. 
+## Build
 
-The other part of this project is a way to visually compare each test execution.  The web-based UI allows comparisons of
-each test run against the recorded test, as well as other test runs as well.
-
-You can watch the video demo on YouTube here: [Link](https://youtu.be/O80CD8Fz40U)
-
-
-## Create UI Verification Tests on iOS from Uploaded Video
-
-I created a tool that creates UI verification tests from uploaded video.  The tool comes with a web-based interface to
-create the UI test with.
-
-You can watch the video demon on YouTube here: [Link](https://youtu.be/UsMLAnpqFP8)
-
-
-# Previous Experiments
-
-## Elevator Simulation (Java) - [Link](https://github.com/dennis-lin-recruiting-2017/elevator)
-
-This is a discrete event simulator to demo the a few concepts of queuing theory.
-
-
-
+```bash
+npm run build
+```
