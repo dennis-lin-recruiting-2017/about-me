@@ -21,9 +21,15 @@ import MenuIcon from '@mui/icons-material/Menu';
 import HomeIcon from '@mui/icons-material/Home';
 import FolderIcon from '@mui/icons-material/Folder';
 import DescriptionIcon from '@mui/icons-material/Description';
+import ArticleIcon from '@mui/icons-material/Article';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
 import { HashRouter, Navigate, Route, Routes, useLocation, useNavigate } from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import Project1Page from './pages/Project1Page';
+import Project2Page from './pages/Project2Page';
+import ResumePage from './pages/ResumePage';
+import Project3Page from './pages/Project3Page';
 
 const drawerWidth = 260;
 
@@ -44,9 +50,15 @@ const navItems: NavItem[] = [
     label: 'Projects',
     icon: <FolderIcon />,
     children: [
-      { label: 'Project 1', path: '/projects/project-1', icon: <DescriptionIcon /> },
-      { label: 'Project 2', path: '/projects/project-2', icon: <DescriptionIcon /> },
+      { label: 'Browser Extension to Visually Record Test Cases', path: '/projects/project-1', icon: <DescriptionIcon /> },
+      { label: 'Webapp to Create Computer-Vision Test Cases from Video', path: '/projects/project-2', icon: <DescriptionIcon /> },
+      { label: 'LLM Orchestration', path: '/projects/project-3', icon: <DescriptionIcon /> },
     ],
+  },
+  {
+    label: 'Resume',
+    path: '/resume',
+    icon: <ArticleIcon />,
   },
 ];
 
@@ -59,18 +71,6 @@ const theme = createTheme({
   },
 });
 
-function Page({ title }: { title: string }) {
-  return (
-    <Box>
-      <Typography variant="h4" gutterBottom>
-        {title}
-      </Typography>
-      <Typography color="text.secondary">
-        This is the {title} page. Replace this with your real content.
-      </Typography>
-    </Box>
-  );
-}
 
 function AppShell() {
   const navigate = useNavigate();
@@ -99,7 +99,7 @@ function AppShell() {
     <Box>
       <Toolbar>
         <Typography variant="h6" noWrap component="div">
-          Template App
+          <a href="mailto:dennis.lin.recruiting.2017@gmail.com">Dennis Lin</a>
         </Typography>
       </Toolbar>
       <Divider />
@@ -180,7 +180,6 @@ function AppShell() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div">
-            MUI + React Router (HashRouter) Template
           </Typography>
         </Toolbar>
       </AppBar>
@@ -226,9 +225,11 @@ function AppShell() {
         <Toolbar />
         <Routes>
           <Route path="/" element={<Navigate to="/home" replace />} />
-          <Route path="/home" element={<Page title="Home" />} />
-          <Route path="/projects/project-1" element={<Page title="Project 1" />} />
-          <Route path="/projects/project-2" element={<Page title="Project 2" />} />
+          <Route path="/home" element={<HomePage />} />
+          <Route path="/projects/project-1" element={<Project1Page />} />
+          <Route path="/projects/project-2" element={<Project2Page />} />
+          <Route path="/projects/project-3" element={<Project3Page />} />
+          <Route path="/resume" element={<ResumePage />} />
         </Routes>
       </Box>
     </Box>
