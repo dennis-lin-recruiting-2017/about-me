@@ -30,6 +30,7 @@ import Project1Page from './pages/Project1Page';
 import Project2Page from './pages/Project2Page';
 import ResumePage from './pages/ResumePage';
 import Project3Page from './pages/Project3Page';
+import Project4Page from './pages/Project4Page';
 
 const drawerWidth = 260;
 
@@ -53,6 +54,7 @@ const navItems: NavItem[] = [
       { label: 'Browser Extension to Visually Record Test Cases', path: '/projects/project-1', icon: <DescriptionIcon /> },
       { label: 'Webapp to Create Computer-Vision Test Cases from Video', path: '/projects/project-2', icon: <DescriptionIcon /> },
       { label: 'LLM Orchestration', path: '/projects/project-3', icon: <DescriptionIcon /> },
+      { label: 'Data Pipeline for Feature Extraction', path: '/projects/project-4', icon: <DescriptionIcon /> },
     ],
   },
   {
@@ -229,6 +231,7 @@ function AppShell() {
           <Route path="/projects/project-1" element={<Project1Page />} />
           <Route path="/projects/project-2" element={<Project2Page />} />
           <Route path="/projects/project-3" element={<Project3Page />} />
+          <Route path="/projects/project-4" element={<Project4Page />} />
           <Route path="/resume" element={<ResumePage />} />
         </Routes>
       </Box>

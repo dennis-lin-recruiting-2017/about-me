@@ -13,11 +13,11 @@ const techStack: string[] = [];
 
 const features: string[] = [];
 
-export default function Project3Page() {
+export default function Project4Page() {
   return (
     <Box>
       <Typography variant="h4" fontWeight={700} gutterBottom>
-        LLM Orchestration
+        Data Pipeline for Feature Extraction
       </Typography>
       <Typography color="text.secondary" variant="subtitle1" sx={{ mb: 3 }} />
 
@@ -27,14 +27,13 @@ export default function Project3Page() {
         {/* Overview */}
         <Paper variant="outlined" sx={{ p: 3, borderRadius: 2 }}>
           <Typography variant="h6" fontWeight={600} gutterBottom>
-            Overview
+              Overview
           </Typography>
           <Typography color="text.secondary" lineHeight={1.8}>
-            A downloadable binary that uses a local LLM to demonstrate how a deployable end-to-end AI system (includes
-            guardrails and observability) would work.
-            <br />
-            <br />
-            Coming soon.
+              Downloadable all-in-one executable to demo a data exaction pipeline.
+              <br />
+              <br />
+              Coming soon.
           </Typography>
         </Paper>
 
@@ -48,7 +47,7 @@ export default function Project3Page() {
             <Box
               component="iframe"
               src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
-              title="Project 3 Demo"
+              title="Project 4 Demo"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
               sx={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', border: 0 }}

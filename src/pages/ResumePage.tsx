@@ -109,6 +109,28 @@ const education: ResumeEntry[] = [
   },
 ];
 
+const additionalInterests: ResumeEntry[] = [
+  {
+    title: "Investment portfolio management across public equities and commercial real estate",
+    org: "",
+    period: "",
+    bullets: [
+        "California-licensed Real Estate Broker",
+        "NMLS-licensed Mortgage Loan Originator",
+        "Pursuing Series 65 licensure"
+    ]
+  },
+  {
+    title: "Languages Spoken",
+    org: "",
+    period: "",
+    bullets: [
+      "Japanese (JLPT N1 certified, native proficiency)",
+      "Mandarin Chinese (native proficiency)",
+    ]
+  }
+]
+
 const skills = [
   // AI Tech
   'LLMs', 'RAG', 'LLM evaluation', 'Vector databases',
@@ -237,7 +259,7 @@ export default function ResumePage() {
       <Stack spacing={4}>
         <Section title="Experience" entries={experience} />
         <Section title="Education" entries={education} />
-
+        <Section title="Additional Interests" entries={additionalInterests} />
         {/* Skills */}
         <Box>
           <Typography variant="h6" fontWeight={700} sx={{ mb: 2 }}>
