@@ -22,9 +22,8 @@ const experience: ResumeEntry[] = [
     org: 'Apple, Inc., AI/ML',
     period: '2021 – Present',
     bullets: [
-      'AI-driven workflows integrating state-of-the-art models and advanced search capabilities',
-      'Developed automated LLM-as-a-critic systems to improve evaluation and decision-making',
-      'Helped bring Siri to life through ML, computer vision, AR/MR, and NLP on Apple Vision Pro and beyond',
+      'Siri with Apple Intelligence',
+      'Siri on VisionOS',
     ],
     skills: [
       // AI
@@ -251,7 +250,7 @@ export default function ResumePage() {
         <Typography variant="h4" fontWeight={700}>
           Resume
         </Typography>
-        <Link href="mailto:dennis.lin.recruiting.2017@gmail.com">Email for Resume</Link>
+        <Link href="mailto:dennis.lin.recruiting.2017@gmail.com">Email for Full Resume</Link>
       </Box>
 
       <Divider sx={{ mb: 4 }} />

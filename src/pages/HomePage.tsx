@@ -10,6 +10,7 @@ import {
 } from '@mui/material';
 import CodeIcon from '@mui/icons-material/Code';
 import WorkIcon from '@mui/icons-material/Work';
+import BuildIcon from '@mui/icons-material/Build';
 
 // ── Skill data ────────────────────────────────────────────────────────────────
 const skills = [
@@ -52,10 +53,10 @@ function getSkillCategory(skill: string): SkillCategory {
 }
 
 const CATEGORY_COLOR: Record<SkillCategory, string> = {
-  language: '#1565c0',  // blue
-  platform: '#2e7d32',  // green
-  ai:       '#212121',  // black
-  other:    '#c62828',  // red
+  language: '#1565c0',
+  platform: '#2e7d32',
+  ai:       '#212121',
+  other:    '#c62828',
 };
 
 const CATEGORY_LABEL: Record<SkillCategory, string> = {
@@ -76,6 +77,20 @@ function SkillChip({ skill }: { skill: string }) {
   );
 }
 
+const AI_CAPABILITIES = [
+  'LLM systems & agentic workflows \u2014 reasoning pipelines, tool use, and multi-step decision systems',
+  'Retrieval & semantic search \u2014 vector databases, embedding systems, and context-aware generation',
+  'Multimodal AI \u2014 combining text, speech, and vision for real-world applications',
+  'On-device inference \u2014 optimizing models for low-latency, privacy-preserving environments',
+];
+
+const INFRA_CAPABILITIES = [
+  'Go-based microservices and distributed systems',
+  'Python orchestration layers for ML workflows',
+  'React-based interfaces for developer and user interaction',
+  'LLM-driven evaluation frameworks \u2014 AI-driven test generation, semantic diffing, and persona-based simulation',
+];
+
 // ── Component ─────────────────────────────────────────────────────────────────
 export default function HomePage() {
   return (
@@ -90,7 +105,7 @@ export default function HomePage() {
             Hi, I'm Dennis 👋
           </Typography>
           <Typography variant="subtitle1" color="text.secondary">
-            Software Engineer · Builder · Life-long Learner
+            Principal AI Engineer · LLM Systems · RAG & Agentic Workflows · Multimodal AI (Vision, Speech, Text) · Production ML Infrastructure
           </Typography>
         </Box>
       </Box>
@@ -98,20 +113,64 @@ export default function HomePage() {
       <Divider sx={{ mb: 4 }} />
 
       <Grid container spacing={3}>
-        {/* About */}
-        <Grid item xs={12} md={7}>
+
+        {/* Summary card */}
+        <Grid item xs={12}>
           <Paper variant="outlined" sx={{ p: 3, borderRadius: 2 }}>
             <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, mb: 2 }}>
               <WorkIcon color="primary" />
               <Typography variant="h6" fontWeight={600}>About Me</Typography>
             </Box>
             <Typography color="text.secondary" lineHeight={1.8}>
-              I'm a software engineer who loves building clean, user-friendly
-              products. I enjoy working across the full stack — from designing
-              APIs to crafting responsive UIs. In my spare time I tinker with
-              side projects, contribute to open source, and explore new
-              technologies.
+              I'm an AI Engineer focused on building production-grade systems around large language
+              models (LLMs), retrieval-augmented generation (RAG), and multimodal AI. My work centers
+              on turning cutting-edge models into reliable, scalable products &mdash; from designing
+              evaluation frameworks and agentic workflows to building end-to-end systems that integrate
+              search, reasoning, and real-time inference.
             </Typography>
+            <Typography color="text.secondary" lineHeight={1.8} sx={{ mt: 1.5 }}>
+              I'm particularly interested in bridging research and engineering: making AI systems more
+              efficient, observable, and deployable across environments, from cloud platforms to edge
+              and on-device systems.
+            </Typography>
+          </Paper>
+        </Grid>
+
+        {/* Capabilities card */}
+        <Grid item xs={12}>
+          <Paper variant="outlined" sx={{ p: 3, borderRadius: 2 }}>
+            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, mb: 2.5 }}>
+              <BuildIcon color="primary" />
+              <Typography variant="h6" fontWeight={600}>Capabilities</Typography>
+            </Box>
+            <Grid container spacing={3}>
+              <Grid item xs={12} md={6}>
+                <Typography variant="subtitle2" fontWeight={700} sx={{ mb: 1.5 }}>
+                  AI Platforms
+                </Typography>
+                <Stack spacing={1}>
+                  {AI_CAPABILITIES.map((item) => (
+                    <Box key={item} sx={{ display: 'flex', gap: 1.5, alignItems: 'flex-start' }}>
+                      <Typography color="primary.main" sx={{ flexShrink: 0, lineHeight: 1.7 }}>▸</Typography>
+                      <Typography variant="body2" color="text.secondary" lineHeight={1.7}>{item}</Typography>
+                    </Box>
+                  ))}
+                </Stack>
+              </Grid>
+              <Grid item xs={12} md={6}>
+                <Typography variant="subtitle2" fontWeight={700} sx={{ mb: 1.5 }}>
+                  Infrastructure & Evaluation
+                </Typography>
+                <Stack spacing={1}>
+                  {INFRA_CAPABILITIES.map((item) => (
+                    <Box key={item} sx={{ display: 'flex', gap: 1.5, alignItems: 'flex-start' }}>
+                      <Typography color="primary.main" sx={{ flexShrink: 0, lineHeight: 1.7 }}>▸</Typography>
+                      <Typography variant="body2" color="text.secondary" lineHeight={1.7}>{item}</Typography>
+                    </Box>
+                  ))}
+                </Stack>
+              </Grid>
+            </Grid>
           </Paper>
         </Grid>
 
@@ -146,6 +205,7 @@ export default function HomePage() {
             </Stack>
           </Paper>
         </Grid>
+
       </Grid>
     </Box>
   );
