@@ -27,9 +27,13 @@ const experience: ResumeEntry[] = [
       'Helped bring Siri to life through ML, computer vision, AR/MR, and NLP on Apple Vision Pro and beyond',
     ],
     skills: [
-        'Python', 'PyTorch', 'LLM evaluation', 'Vector databases', 'LLMs', 'RAG', 'LangChain', 'LangFlow', 'LangGraph',
-        'Java', 'Golang', 'C++', 'Kafka', 'Redis', 'Postgres', 'Kubnernetes', 'Docker', 'Terraform', 'AWS', 'React',
-        'Computer Vision', 'NLP', 'AR/MR', 'Swift'],
+      // AI
+      'LLMs', 'RAG', 'LLM evaluation', 'Vector databases', 'LangChain', 'LangFlow', 'LangGraph', 'PyTorch', 'Computer Vision', 'NLP', 'AR/MR',
+      // Platforms
+      'Kubernetes', 'AWS', 'Docker', 'Terraform', 'Kafka', 'Redis', 'Postgres', 'Apache Cassandra',
+      // Languages
+      'Python', 'Java', 'Golang', 'C++', 'Swift', 'React',
+    ],
   },
   {
     title: 'Principal Software Engineer',
@@ -39,7 +43,14 @@ const experience: ResumeEntry[] = [
       'Splunk Cloud',
       'Platform and Productivity Systems',
     ],
-    skills: ['Python', 'Kubernetes', 'AWS', 'Terraform', 'REST APIs'],
+    skills: [
+      // Platforms
+      'Kubernetes', 'AWS', 'Terraform', 'MongoDB', 'Gitlab',
+      // Languages
+      'Golang', 'Python', 'C++',
+      // Other
+      'REST APIs',
+    ],
   },
   {
     title: 'Software Engineer',
@@ -48,7 +59,14 @@ const experience: ResumeEntry[] = [
     bullets: [
       'Apple Cloud Infrastructure (formerly Platform Infrastructure Engineering)',
     ],
-    skills: ['Python', 'Go', 'Docker', 'Kubernetes', 'CI/CD'],
+    skills: [
+      // Platforms
+      'Kubernetes', 'Docker', 'CI/CD', 'Apache Cassandra', 'Postgres', 'Redis',
+      // Languages
+      'Python', 'Go', 'Java', 'Swift', 'React',
+      // Other
+      'Spring MVC', 'JavaEE',
+    ],
   },
   {
     title: 'Staff Software Engineer',
@@ -59,7 +77,14 @@ const experience: ResumeEntry[] = [
       'QuickBooks Mobile',
       'QuickBooks Self-Employed',
     ],
-    skills: ['Java', 'React', 'Node.js', 'iOS', 'Android', 'REST APIs'],
+    skills: [
+      // Platforms
+      'Oracle', 'Postgres', 'iOS', 'Android', 'Apache HBase',
+      // Languages
+      'Java', 'React', 'Node.js',
+      // Other
+      'Spring MVC', 'GraphQL', 'REST APIs',
+    ],
   },
 ];
 
@@ -85,17 +110,34 @@ const education: ResumeEntry[] = [
 ];
 
 const skills = [
-  'TypeScript', 'React', 'Node.js', 'Python',
-  'PostgreSQL', 'Docker', 'Git', 'REST APIs', 'FastAPI', 'Material UI',
+  // AI Tech
+  'LLMs', 'RAG', 'LLM evaluation', 'Vector databases',
+  'LangChain', 'LangGraph', 'LangFlow', 'PyTorch',
+  'Computer Vision', 'NLP', 'AR/MR',
+  // Platforms
+  'Kubernetes', 'AWS', 'Docker', 'iOS', 'Android', 'Terraform', 'CI/CD',
+  'PostgreSQL', 'Postgres', 'Git', 'Kafka', 'Redis', 'MongoDB', 'Gitlab',
+  'Oracle', 'Apache Cassandra', 'Apache HBase',
+  // Languages
+  'Python', 'Swift', 'Go', 'Golang', 'Java', 'TypeScript', 'Node.js', 'C++', 'React',
+  // Other
+  'REST APIs', 'GraphQL', 'Spring MVC',
 ];
 
 // ── Skill colour coding ──────────────────────────────────────────────────────
-const LANGUAGES  = new Set(['Python', 'Swift', 'Go', 'Java', 'TypeScript', 'Node.js', 'Golang', 'C++', 'React',
-                            'Typescript']);
-const PLATFORMS  = new Set(['Kubernetes', 'AWS', 'Docker', 'iOS', 'Android',
-                            'Terraform', 'CI/CD', 'PostgreSQL', 'Git']);
-const AI_TECH    = new Set(['LLMs', 'Computer Vision', 'NLP', 'AR/MR', 'RAG', 'LLM evaluation', 'Vector databases',
-                            'LangChain', 'LangGraph', 'LangFlow']);
+const LANGUAGES = new Set([
+  'Python', 'Swift', 'Go', 'Golang', 'Java', 'TypeScript', 'Node.js', 'C++', 'React',
+]);
+const PLATFORMS = new Set([
+  'Kubernetes', 'AWS', 'Docker', 'iOS', 'Android', 'Terraform', 'CI/CD',
+  'PostgreSQL', 'Postgres', 'Git', 'Kafka', 'Redis', 'MongoDB', 'Gitlab',
+  'Oracle', 'Apache Cassandra', 'Apache HBase',
+]);
+const AI_TECH = new Set([
+  'LLMs', 'RAG', 'LLM evaluation', 'Vector databases',
+  'LangChain', 'LangGraph', 'LangFlow', 'PyTorch',
+  'Computer Vision', 'NLP', 'AR/MR',
+]);
 
 type SkillCategory = 'language' | 'platform' | 'ai' | 'other';
 
@@ -198,14 +240,22 @@ export default function ResumePage() {
 
         {/* Skills */}
         <Box>
-          <Typography variant="h6" fontWeight={700} sx={{ mb: 1.5 }}>
+          <Typography variant="h6" fontWeight={700} sx={{ mb: 2 }}>
             Skills
           </Typography>
-          <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
-            {skills.map((skill) => (
-              <SkillChip key={skill} skill={skill} />
-            ))}
-          </Box>
+          <Stack spacing={1.5}>
+            {(['ai', 'platform', 'language', 'other'] as SkillCategory[]).map((category) => {
+              const group = skills.filter((s) => getSkillCategory(s) === category);
+              if (group.length === 0) return null;
+              return (
+                <Box key={category} sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
+                  {group.map((skill) => (
+                    <SkillChip key={skill} skill={skill} />
+                  ))}
+                </Box>
+              );
+            })}
+          </Stack>
         </Box>
       </Stack>
     </Box>
