@@ -247,11 +247,26 @@ export default function ResumePage() {
             {(['ai', 'platform', 'language', 'other'] as SkillCategory[]).map((category) => {
               const group = skills.filter((s) => getSkillCategory(s) === category);
               if (group.length === 0) return null;
+              const label: Record<SkillCategory, string> = {
+                ai: 'AI',
+                platform: 'Platforms',
+                language: 'Languages',
+                other: 'Other',
+              };
               return (
-                <Box key={category} sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
-                  {group.map((skill) => (
-                    <SkillChip key={skill} skill={skill} />
-                  ))}
+                <Box key={category} sx={{ display: 'flex', alignItems: 'flex-start', gap: 2 }}>
+                  <Typography
+                    variant="body2"
+                    fontWeight={700}
+                    sx={{ minWidth: 80, pt: 0.5, color: 'text.secondary', textAlign: 'right' }}
+                  >
+                    {label[category]}
+                  </Typography>
+                  <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
+                    {group.map((skill) => (
+                      <SkillChip key={skill} skill={skill} />
+                    ))}
+                  </Box>
                 </Box>
               );
             })}
