@@ -25,7 +25,7 @@ const skills = [
   // Languages
   'Python', 'Swift', 'Go', 'Golang', 'Java', 'TypeScript', 'Node.js', 'C++', 'React',
   // Other
-  'REST APIs', 'GraphQL', 'Spring MVC',
+  'REST APIs', 'GraphQL', 'Spring MVC', 'ffmpeg'
 ];
 
 // ── Skill colour coding ───────────────────────────────────────────────────────
