@@ -272,9 +272,6 @@ export default function ResumePage() {
       <Divider sx={{ mb: 4 }} />
 
       <Stack spacing={4}>
-        <Section title="Experience" entries={experience} />
-        <Section title="Education" entries={education} />
-        <Section title="Additional Interests" entries={additionalInterests} />
         {/* Skills */}
         <Box>
           <Typography variant="h6" fontWeight={700} sx={{ mb: 2 }}>
@@ -309,6 +306,9 @@ export default function ResumePage() {
             })}
           </Stack>
         </Box>
+        <Section title="Experience" entries={experience} />
+        <Section title="Education" entries={education} />
+        <Section title="Additional Interests" entries={additionalInterests} />
       </Stack>
     </Box>
   );
