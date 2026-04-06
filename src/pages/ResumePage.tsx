@@ -69,7 +69,7 @@ const experience: ResumeEntry[] = [
   },
   {
     title: 'Staff Software Engineer',
-    org: 'Intuit, Inc., ',
+    org: 'Intuit, Inc.',
     period: '2015 to 2018',
     bullets: [
       'QuickBooks Online Payroll',
@@ -83,6 +83,22 @@ const experience: ResumeEntry[] = [
       'Java', 'React', 'Node.js',
       // Other
       'Spring MVC', 'GraphQL', 'REST APIs',
+    ],
+  },
+  {
+    title: 'Engineering Manager',
+    org: 'Zillow, Inc.',
+    period: '2014 to 2015',
+    bullets: [
+      'Growth Engineering for https://www.hotpads.com',
+    ],
+    skills: [
+      // Platforms
+      'Oracle', 'Postgres', 'AWS',
+      // Languages
+      'Java', 'React', 'Node.js',
+      // Other
+      'GraphQL', 'REST APIs',
     ],
   },
 ];
