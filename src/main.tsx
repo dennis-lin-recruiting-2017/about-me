@@ -51,9 +51,9 @@ const navItems: NavItem[] = [
     label: 'Projects',
     icon: <FolderIcon />,
     children: [
-      { label: 'Browser Extension to Visually Record Test Cases', path: '/projects/project-1', icon: <DescriptionIcon /> },
-      { label: 'Webapp to Create Computer-Vision Test Cases from Video', path: '/projects/project-2', icon: <DescriptionIcon /> },
-      { label: 'Data Pipeline for Feature Extraction', path: '/projects/project-4', icon: <DescriptionIcon /> },
+      { label: '2021 - Browser Extension to Visually Record Test Cases', path: '/projects/project-1', icon: <DescriptionIcon /> },
+      { label: '2024 - Webapp to Create Computer-Vision Test Cases from Video', path: '/projects/project-2', icon: <DescriptionIcon /> },
+      { label: '2026 - Data Pipeline for Feature Extraction', path: '/projects/project-4', icon: <DescriptionIcon /> },
       { label: 'LLM Orchestration (Coming Soon)', path: '/projects/project-3', icon: <DescriptionIcon /> },
     ],
   },

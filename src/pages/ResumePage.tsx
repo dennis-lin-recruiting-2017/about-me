@@ -149,7 +149,7 @@ const additionalInterests: ResumeEntry[] = [
 const skills = [
   // AI Tech
   'LLMs', 'RAG', 'LLM evaluation', 'Vector databases',
-  'LangChain', 'LangGraph', 'LangFlow', 'PyTorch',
+  'LangChain', 'LangGraph', 'PyTorch',
   'Computer Vision', 'NLP', 'AR/MR',
   // Platforms
   'Kubernetes', 'AWS', 'Docker', 'iOS', 'Android', 'Terraform', 'CI/CD',
@@ -172,7 +172,7 @@ const PLATFORMS = new Set([
 ]);
 const AI_TECH = new Set([
   'LLMs', 'RAG', 'LLM evaluation', 'Vector databases',
-  'LangChain', 'LangGraph', 'LangFlow', 'PyTorch',
+  'LangChain', 'LangGraph', 'PyTorch',
   'Computer Vision', 'NLP', 'AR/MR',
 ]);
 
