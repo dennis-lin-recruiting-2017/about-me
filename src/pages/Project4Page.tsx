@@ -17,7 +17,7 @@ export default function Project4Page() {
   return (
     <Box>
       <Typography variant="h4" fontWeight={700} gutterBottom>
-        Data Pipeline for Feature Extraction
+        Feature Extraction Demo
       </Typography>
       <Typography color="text.secondary" variant="subtitle1" sx={{ mb: 3 }} />
 
@@ -30,15 +30,13 @@ export default function Project4Page() {
               Overview
           </Typography>
           <Typography color="text.secondary" lineHeight={1.8}>
-              Downloadable all-in-one executable to demo a data exaction pipeline.
-              <br />
-              <br />
-              Coming soon.
+              This is a feature extraction demo.  I created a tool that analyzes uploaded video and determines if a
+              tennis ball is in the frame, and extracts its position if it is. The results can be viewed
           </Typography>
         </Paper>
 
         {/* Demo Video — uncomment and set src when ready */}
-        {/*
+        {
         <Paper variant="outlined" sx={{ p: 3, borderRadius: 2 }}>
           <Typography variant="h6" fontWeight={600} gutterBottom>
             Demo Video
@@ -46,7 +44,7 @@ export default function Project4Page() {
           <Box sx={{ position: 'relative', width: '100%', paddingTop: '56.25%', borderRadius: 1, overflow: 'hidden' }}>
             <Box
               component="iframe"
-              src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+              src="https://www.youtube.com/embed/JTzsljxE-NA"
               title="Project 4 Demo"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
@@ -54,7 +52,7 @@ export default function Project4Page() {
             />
           </Box>
         </Paper>
-        */}
+        }
 
         {/* Tech Stack */}
         {techStack.length > 0 && (
