@@ -27,7 +27,7 @@ const experience: ResumeEntry[] = [
     ],
     skills: [
       // AI
-      'LLMs', 'RAG', 'LLM evaluation', 'Vector databases', 'LangChain', 'LangFlow', 'LangGraph', 'PyTorch', 'Computer Vision', 'NLP', 'AR/MR',
+      'LLMs', 'RAG', 'LLM evaluation', 'Vector databases', 'LangChain', 'LangGraph', 'PyTorch', 'Computer Vision', 'NLP', 'AR/MR',
       // Platforms
       'Kubernetes', 'AWS', 'Docker', 'Terraform', 'Kafka', 'Redis', 'Postgres', 'Apache Cassandra',
       // Languages
