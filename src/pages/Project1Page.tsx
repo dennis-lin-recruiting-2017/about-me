@@ -1,14 +1,11 @@
 import {
   Box,
-  Button,
   Chip,
   Divider,
   Paper,
   Stack,
   Typography,
 } from '@mui/material';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import LaunchIcon from '@mui/icons-material/Launch';
 import BuildIcon from '@mui/icons-material/Build';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 
@@ -20,6 +17,7 @@ const features = [
   'Responsive design for mobile and desktop',
   'REST API with full CRUD operations',
   'Automated CI/CD pipeline',
+  'Computer vision',
 ];
 
 export default function Project1Page() {
@@ -39,8 +37,11 @@ export default function Project1Page() {
             Overview
           </Typography>
           <Typography color="text.secondary" lineHeight={1.8}>
-              I created a browser extension to visually record test cases.  The test cases can be played back on a
-              desktop or mobile devices.  All the UI elements are detected using computer vision.
+              I built a browser extension that records test cases visually. In addition to capturing the UI structure
+              through the HTML DOM tree, it enriches each recording with computer vision. The tool captures not just
+              the pixel-level appearance of UI elements, but also their spatial relationships to one another. As a
+              result, a visual test case recorded on one device, such as a desktop, can be replayed reliably on another,
+              such as a mobile device.
           </Typography>
         </Paper>
 

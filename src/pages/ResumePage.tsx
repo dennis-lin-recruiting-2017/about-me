@@ -163,12 +163,12 @@ const skills = [
 
 // ── Skill colour coding ──────────────────────────────────────────────────────
 const LANGUAGES = new Set([
-  'Python', 'Swift', 'Go', 'Golang', 'Java', 'TypeScript', 'Node.js', 'C++', 'React',
+  'Python', 'Swift', 'Golang', 'Java', 'TypeScript', 'Node.js', 'C++', 'React',
 ]);
 const PLATFORMS = new Set([
   'Kubernetes', 'AWS', 'Docker', 'iOS', 'Android', 'Terraform', 'CI/CD',
-  'PostgreSQL', 'Postgres', 'Git', 'Kafka', 'Redis', 'MongoDB', 'Gitlab',
-  'Oracle', 'Apache Cassandra', 'Apache HBase',
+  'Postgres', 'Git', 'Kafka', 'Redis', 'MongoDB', 'Gitlab',
+  'Oracle', 'Apache Cassandra', 'Apache HBase', 'ffmpeg'
 ]);
 const AI_TECH = new Set([
   'LLMs', 'RAG', 'LLM evaluation', 'Vector databases',

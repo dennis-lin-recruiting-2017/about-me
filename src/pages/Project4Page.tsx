@@ -9,15 +9,19 @@ import {
 import BuildIcon from '@mui/icons-material/Build';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 
-const techStack: string[] = [];
+const techStack = ['Golang', 'Postgres', 'React', 'Computer Vision', 'Swift', 'iOS', 'ffmpeg', 'SQLite'];
 
-const features: string[] = [];
+const features: string[] = [
+    'Computer Vision',
+    'Video processing',
+    'AI/ML feature extraction'
+];
 
 export default function Project4Page() {
   return (
     <Box>
       <Typography variant="h4" fontWeight={700} gutterBottom>
-        Feature Extraction Demo
+          Perception-Based Object Detection Data Pipeline
       </Typography>
       <Typography color="text.secondary" variant="subtitle1" sx={{ mb: 3 }} />
 
@@ -30,18 +34,21 @@ export default function Project4Page() {
               Overview
           </Typography>
           <Typography color="text.secondary" lineHeight={1.8}>
-              This is a feature extraction demo.  I created a tool that analyzes uploaded video and determines if a
-              tennis ball is in the frame, and extracts its position if it is. The results can be viewed by clicking
-              on the detection results underneath the video.  IF a tennis ball s in the frame, then a red circle will
-              be overlaid on top of the video to show its location.
+              I built a tool that analyzes uploaded video and runs an embedded data pipeline to extract features. In
+              this demo, the pipeline identifies the location of a tennis ball in each frame. Users can inspect the
+              detection results below the video, and when a ball is found, its position is highlighted with a red circle
+              overlaid on the frame.
               <br />
               <br />
-              The detection of the tennis ball starts by applying a yellow mask to detect regions with enough saturation
-              and brightness. From that yellow mask, the code finds connected blobs and prefers a small, compact,
-              roughly circular filled region. It scores each blob by size, aspect ratio, fill ratio, and circularity,
-              then returns the center of the best candidate as the detected ball position. If no blob looks circular
-              enough, it falls back to the largest yellow blob’s centroid with lower confidence so the system can still
-              provide a location.
+              The detection process starts by applying a yellow mask to isolate regions with enough brightness and
+              saturation. It then identifies connected blobs and selects the candidate that is most likely to represent
+              a tennis ball based on size, compactness, fill ratio, aspect ratio, and circularity. The center of the
+              highest-scoring candidate is returned as the detected position. When no candidate appears circular enough,
+              the system falls back to the centroid of the largest yellow blob with lower confidence, ensuring it can
+              still provide an approximate location.
+              <br />
+              <br />
+              Downloadable demo coming soon.
           </Typography>
         </Paper>
 

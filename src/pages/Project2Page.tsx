@@ -7,19 +7,16 @@ import {
   Stack,
   Typography,
 } from '@mui/material';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import LaunchIcon from '@mui/icons-material/Launch';
 import BuildIcon from '@mui/icons-material/Build';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 
-const techStack = ['Python', 'FastAPI', 'React', 'SQLite', 'OpenAI API'];
+const techStack = ['Golang', 'Postgres', 'React', 'Computer Vision', 'Swift', 'iOS', 'ffmpeg', 'Redis'];
 
 const features = [
-  'AI-powered text summarization',
-  'Document upload and parsing (PDF, DOCX)',
-  'Searchable knowledge base',
+  'Video processing',
+  'Computer vision',
   'REST API with OpenAPI docs',
-  'Lightweight single-file database',
+  'Containerized deployment',
 ];
 
 export default function Project2Page() {
@@ -39,9 +36,8 @@ export default function Project2Page() {
             Overview
           </Typography>
           <Typography color="text.secondary" lineHeight={1.8}>
-              This is a tool to create an end-to-end UI test case from an uploaded video.  The tool will examine the
-              video, identify UI elements and then allow the user to create verification steps for specified frames or
-              time ranges.
+              This tool turns an uploaded video into an end-to-end UI test case. It analyzes the video, identifies UI
+              elements, and lets users create verification steps for specific frames or time ranges.
           </Typography>
         </Paper>
 
