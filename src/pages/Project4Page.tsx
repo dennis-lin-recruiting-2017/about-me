@@ -48,7 +48,7 @@ export default function Project4Page() {
               still provide an approximate location.
               <br />
               <br />
-              Downloadable demo coming soon.
+              A demo is available for <a href="https://github.com/dennis-lin-recruiting-2017/about-me/blob/main/downloads/project04/Demo_DennisLin_TennisBallLocator_AppleSilicon">Macs running Apple Silicon</a>.
           </Typography>
         </Paper>
 
