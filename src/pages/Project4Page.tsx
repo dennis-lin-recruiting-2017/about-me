@@ -46,9 +46,6 @@ export default function Project4Page() {
               highest-scoring candidate is returned as the detected position. When no candidate appears circular enough,
               the system falls back to the centroid of the largest yellow blob with lower confidence, ensuring it can
               still provide an approximate location.
-              <br />
-              <br />
-              A demo is available for <a href="https://github.com/dennis-lin-recruiting-2017/about-me/blob/main/downloads/project04/Demo_DennisLin_TennisBallLocator_AppleSilicon">Macs running Apple Silicon</a>.
           </Typography>
         </Paper>
 
