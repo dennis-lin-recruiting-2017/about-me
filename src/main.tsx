@@ -77,11 +77,11 @@ function AppShell() {
       label: t('nav.projects'),
       icon: <FolderIcon />,
       children: [
-        { label: t('nav.project4'), path: '/projects/project-4', icon: <DescriptionIcon /> },
-        { label: t('nav.project2'), path: '/projects/project-2', icon: <DescriptionIcon /> },
-        { label: t('nav.project1'), path: '/projects/project-1', icon: <DescriptionIcon /> },
-        { label: t('nav.project3'), path: '/projects/project-3', icon: <DescriptionIcon /> },
-      ],
+        { label: t('nav.project4'), path: '/projects/project-0004', icon: <DescriptionIcon /> },
+        { label: t('nav.project2'), path: '/projects/project-0002', icon: <DescriptionIcon /> },
+        { label: t('nav.project1'), path: '/projects/project-0001', icon: <DescriptionIcon /> },
+        { label: t('nav.project3'), path: '/projects/project-0003', icon: <DescriptionIcon /> },
+      ].map((child, index) => ({ ...child, label: child.label })),
     },
     { label: t('nav.resume'), path: '/resume', icon: <ArticleIcon /> },
   ];
@@ -227,10 +227,10 @@ function AppShell() {
         <Routes>
           <Route path="/" element={<Navigate to="/home" replace />} />
           <Route path="/home" element={<HomePage />} />
-          <Route path="/projects/project-1" element={<Project1Page />} />
-          <Route path="/projects/project-2" element={<Project2Page />} />
-          <Route path="/projects/project-3" element={<Project3Page />} />
-          <Route path="/projects/project-4" element={<Project4Page />} />
+          <Route path="/projects/project-0001" element={<Project1Page />} />
+          <Route path="/projects/project-0002" element={<Project2Page />} />
+          <Route path="/projects/project-0003" element={<Project3Page />} />
+          <Route path="/projects/project-0004" element={<Project4Page />} />
           <Route path="/resume" element={<ResumePage />} />
         </Routes>
       </Box>

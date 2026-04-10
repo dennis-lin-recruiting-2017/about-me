@@ -5,7 +5,7 @@ const zhTW = {
     resume: '履歷',
     project1: '2021 - 視覺化錄製測試案例的瀏覽器擴充功能',
     project2: '2024 - 從影片建立電腦視覺測試案例的網頁應用程式',
-    project3: 'LLM 協調系統（即將推出）',
+    project3: '2026 - LLM 協調系統（即將推出）',
     project4: '2026 - 基於感知的物件偵測資料管道',
   },
   common: {

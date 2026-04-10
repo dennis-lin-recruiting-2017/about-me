@@ -5,7 +5,7 @@ const en = {
     resume: 'Resume',
     project1: '2021 - Browser Extension to Visually Record Test Cases',
     project2: '2024 - Webapp to Create Computer-Vision Test Cases from Video',
-    project3: 'LLM Orchestration (Coming Soon)',
+    project3: '2026 - LLM Orchestration (Coming Soon)',
     project4: '2026 - Perception-Based Object Detection Data Pipeline',
   },
   common: {

@@ -16,7 +16,7 @@ import { useTranslation } from 'react-i18next';
 // ── Skill data (language-agnostic) ───────────────────────────────────────────
 const skills = [
   'LLMs', 'RAG', 'LLM evaluation', 'Vector databases',
-  'LangChain', 'LangGraph', 'LangFlow', 'PyTorch',
+  'LangChain', 'LangGraph', 'PyTorch',
   'Computer Vision', 'NLP', 'AR/MR',
   'Kubernetes', 'AWS', 'Docker', 'iOS', 'Android', 'Terraform', 'CI/CD',
   'PostgreSQL', 'Postgres', 'Git', 'Kafka', 'Redis', 'MongoDB', 'Gitlab',
@@ -35,7 +35,7 @@ const PLATFORM_SET = new Set([
 ]);
 const AI_SET = new Set([
   'LLMs', 'RAG', 'LLM evaluation', 'Vector databases',
-  'LangChain', 'LangGraph', 'LangFlow', 'PyTorch',
+  'LangChain', 'LangGraph', 'PyTorch',
   'Computer Vision', 'NLP', 'AR/MR',
 ]);
 
