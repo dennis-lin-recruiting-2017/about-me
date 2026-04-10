@@ -1,8 +1,11 @@
+import './i18n';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {
   AppBar,
   Box,
+  ButtonGroup,
+  Button,
   Collapse,
   CssBaseline,
   Divider,
@@ -25,6 +28,7 @@ import ArticleIcon from '@mui/icons-material/Article';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
 import { HashRouter, Navigate, Route, Routes, useLocation, useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import HomePage from './pages/HomePage';
 import Project1Page from './pages/Project1Page';
 import Project2Page from './pages/Project2Page';
@@ -34,77 +38,80 @@ import Project4Page from './pages/Project4Page';
 
 const drawerWidth = 260;
 
-type NavItem = {
-  label: string;
-  path?: string;
-  icon?: React.ReactNode;
-  children?: NavItem[];
-};
-
-const navItems: NavItem[] = [
-  {
-    label: 'Home',
-    path: '/home',
-    icon: <HomeIcon />,
-  },
-  {
-    label: 'Projects',
-    icon: <FolderIcon />,
-    children: [
-      { label: '2026 - Perception-Based Object Detection Data Pipeline', path: '/projects/project-4', icon: <DescriptionIcon /> },
-      { label: '2024 - Webapp to Create Computer-Vision Test Cases from Video', path: '/projects/project-2', icon: <DescriptionIcon /> },
-      { label: '2021 - Browser Extension to Visually Record Test Cases', path: '/projects/project-1', icon: <DescriptionIcon /> },
-      { label: 'LLM Orchestration (Coming Soon)', path: '/projects/project-3', icon: <DescriptionIcon /> },
-    ],
-  },
-  {
-    label: 'Resume',
-    path: '/resume',
-    icon: <ArticleIcon />,
-  },
+const LANGUAGES = [
+  { code: 'en',    label: 'EN' },
+  { code: 'ja',    label: '日本語' },
+  { code: 'zh-TW', label: '繁中' },
 ];
 
 const theme = createTheme({
   palette: {
     mode: 'light',
-    primary: {
-      main: '#1976d2',
-    },
+    primary: { main: '#1976d2' },
   },
 });
-
 
 function AppShell() {
   const navigate = useNavigate();
   const location = useLocation();
+  const { t, i18n } = useTranslation();
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [projectsOpen, setProjectsOpen] = React.useState(
     location.pathname.startsWith('/projects')
   );
 
   React.useEffect(() => {
-    if (location.pathname.startsWith('/projects')) {
-      setProjectsOpen(true);
-    }
+    if (location.pathname.startsWith('/projects')) setProjectsOpen(true);
   }, [location.pathname]);
 
-  const handleDrawerToggle = () => {
-    setMobileOpen((prev) => !prev);
-  };
+  const handleDrawerToggle = () => setMobileOpen((prev) => !prev);
 
   const handleNavigate = (path: string) => {
     navigate(path);
     setMobileOpen(false);
   };
 
+  const navItems = [
+    { label: t('nav.home'), path: '/home', icon: <HomeIcon /> },
+    {
+      label: t('nav.projects'),
+      icon: <FolderIcon />,
+      children: [
+        { label: t('nav.project4'), path: '/projects/project-4', icon: <DescriptionIcon /> },
+        { label: t('nav.project2'), path: '/projects/project-2', icon: <DescriptionIcon /> },
+        { label: t('nav.project1'), path: '/projects/project-1', icon: <DescriptionIcon /> },
+        { label: t('nav.project3'), path: '/projects/project-3', icon: <DescriptionIcon /> },
+      ],
+    },
+    { label: t('nav.resume'), path: '/resume', icon: <ArticleIcon /> },
+  ];
+
   const drawer = (
-    <Box>
+    <Box sx={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
       <Toolbar>
         <Typography variant="h6" noWrap component="div">
           <a href="mailto:dennis.lin.recruiting.2017@gmail.com">Dennis Lin</a>
         </Typography>
       </Toolbar>
       <Divider />
+
+      {/* Language toggle */}
+      <Box sx={{ px: 2, py: 1.5 }}>
+        <ButtonGroup size="small" fullWidth>
+          {LANGUAGES.map(({ code, label }) => (
+            <Button
+              key={code}
+              variant={i18n.language === code ? 'contained' : 'outlined'}
+              onClick={() => i18n.changeLanguage(code)}
+              sx={{ fontSize: '0.7rem', px: 0.5 }}
+            >
+              {label}
+            </Button>
+          ))}
+        </ButtonGroup>
+      </Box>
+      <Divider />
+
       <List disablePadding>
         {navItems.map((item) => {
           if (!item.children) {
@@ -121,9 +128,7 @@ function AppShell() {
             );
           }
 
-          const childSelected = item.children.some(
-            (child) => child.path === location.pathname
-          );
+          const childSelected = item.children.some((c) => c.path === location.pathname);
 
           return (
             <React.Fragment key={item.label}>
@@ -135,20 +140,22 @@ function AppShell() {
                 <ListItemText primary={item.label} />
                 {projectsOpen ? <ExpandLess /> : <ExpandMore />}
               </ListItemButton>
-
               <Collapse in={projectsOpen} timeout="auto" unmountOnExit>
                 <List component="div" disablePadding>
                   {item.children.map((child) => {
                     const selected = location.pathname === child.path;
                     return (
                       <ListItemButton
-                        key={child.label}
+                        key={child.path}
                         sx={{ pl: 4 }}
                         selected={selected}
                         onClick={() => handleNavigate(child.path!)}
                       >
                         <ListItemIcon>{child.icon}</ListItemIcon>
-                        <ListItemText primary={child.label} />
+                        <ListItemText
+                          primary={child.label}
+                          primaryTypographyProps={{ variant: 'body2' }}
+                        />
                       </ListItemButton>
                     );
                   })}
@@ -167,10 +174,7 @@ function AppShell() {
 
       <AppBar
         position="fixed"
-        sx={{
-          width: { sm: `calc(100% - ${drawerWidth}px)` },
-          ml: { sm: `${drawerWidth}px` },
-        }}
+        sx={{ width: { sm: `calc(100% - ${drawerWidth}px)` }, ml: { sm: `${drawerWidth}px` } }}
       >
         <Toolbar>
           <IconButton
@@ -181,15 +185,11 @@ function AppShell() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap component="div">
-          </Typography>
+          <Typography variant="h6" noWrap component="div" />
         </Toolbar>
       </AppBar>
 
-      <Box
-        component="nav"
-        sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
-      >
+      <Box component="nav" sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}>
         <Drawer
           variant="temporary"
           open={mobileOpen}
@@ -202,7 +202,6 @@ function AppShell() {
         >
           {drawer}
         </Drawer>
-
         <Drawer
           variant="permanent"
           sx={{
