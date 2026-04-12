@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 
 const techStack = ['React', 'TypeScript', 'Node.js', 'PostgreSQL', 'Docker'];
 
-export default function Project1Page() {
+export default function Project0001Page() {
   const { t } = useTranslation();
   const features = t('project1.features', { returnObjects: true }) as string[];
 

@@ -3,16 +3,16 @@ import BuildIcon from '@mui/icons-material/Build';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import { useTranslation } from 'react-i18next';
 
-const techStack = ['Golang', 'Postgres', 'React', 'Computer Vision', 'Swift', 'iOS', 'ffmpeg', 'Redis'];
+const techStack = ['Golang', 'Postgres', 'React', 'Computer Vision', 'Audio Perception', 'Swift', 'iOS', 'ffmpeg', 'SQLite'];
 
-export default function Project2Page() {
+export default function Project0004Page() {
   const { t } = useTranslation();
-  const features = t('project2.features', { returnObjects: true }) as string[];
+  const features = t('project4.features', { returnObjects: true }) as string[];
 
   return (
     <Box>
       <Typography variant="h4" fontWeight={700} gutterBottom>
-        {t('project2.title')}
+        {t('project4.title')}
       </Typography>
       <Typography color="text.secondary" variant="subtitle1" sx={{ mb: 3 }} />
       <Divider sx={{ mb: 4 }} />
@@ -20,7 +20,8 @@ export default function Project2Page() {
       <Stack spacing={3}>
         <Paper variant="outlined" sx={{ p: 3, borderRadius: 2 }}>
           <Typography variant="h6" fontWeight={600} gutterBottom>{t('common.overview')}</Typography>
-          <Typography color="text.secondary" lineHeight={1.8}>{t('project2.overview')}</Typography>
+          <Typography color="text.secondary" lineHeight={1.8}>{t('project4.overviewPara1')}</Typography>
+          <Typography color="text.secondary" lineHeight={1.8} sx={{ mt: 1.5 }}>{t('project4.overviewPara2')}</Typography>
         </Paper>
 
         <Paper variant="outlined" sx={{ p: 3, borderRadius: 2 }}>
@@ -28,8 +29,8 @@ export default function Project2Page() {
           <Box sx={{ position: 'relative', width: '100%', paddingTop: '56.25%', borderRadius: 1, overflow: 'hidden' }}>
             <Box
               component="iframe"
-              src="https://www.youtube.com/embed/UsMLAnpqFP8"
-              title={t('project2.title')}
+              src="https://www.youtube.com/embed/JTzsljxE-NA"
+              title={t('project4.title')}
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
               sx={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', border: 0 }}

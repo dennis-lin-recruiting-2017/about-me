@@ -30,11 +30,13 @@ import ExpandMore from '@mui/icons-material/ExpandMore';
 import { HashRouter, Navigate, Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import HomePage from './pages/HomePage';
-import Project1Page from './pages/Project1Page';
-import Project2Page from './pages/Project2Page';
+import Project0001Page from './pages/Project0001Page';
+import Project0002Page from './pages/Project0002Page';
 import ResumePage from './pages/ResumePage';
-import Project3Page from './pages/Project3Page';
-import Project4Page from './pages/Project4Page';
+import Project0003Page from './pages/Project0003Page';
+import Project0004Page from './pages/Project0004Page';
+import Project0005Page from './pages/Project0005Page';
+import Project0006Page from './pages/Project0006Page';
 
 const drawerWidth = 260;
 
@@ -81,7 +83,9 @@ function AppShell() {
         { label: t('nav.project2'), path: '/projects/project-0002', icon: <DescriptionIcon /> },
         { label: t('nav.project1'), path: '/projects/project-0001', icon: <DescriptionIcon /> },
         { label: t('nav.project3'), path: '/projects/project-0003', icon: <DescriptionIcon /> },
-      ].map((child, index) => ({ ...child, label: child.label })),
+        { label: t('nav.project5'), path: '/projects/project-0005', icon: <DescriptionIcon /> },
+        { label: t('nav.project6'), path: '/projects/project-0006', icon: <DescriptionIcon /> },
+      ].map((child) => ({ ...child, label: child.label })),
     },
     { label: t('nav.resume'), path: '/resume', icon: <ArticleIcon /> },
   ];
@@ -227,10 +231,12 @@ function AppShell() {
         <Routes>
           <Route path="/" element={<Navigate to="/home" replace />} />
           <Route path="/home" element={<HomePage />} />
-          <Route path="/projects/project-0001" element={<Project1Page />} />
-          <Route path="/projects/project-0002" element={<Project2Page />} />
-          <Route path="/projects/project-0003" element={<Project3Page />} />
-          <Route path="/projects/project-0004" element={<Project4Page />} />
+          <Route path="/projects/project-0001" element={<Project0001Page />} />
+          <Route path="/projects/project-0002" element={<Project0002Page />} />
+          <Route path="/projects/project-0003" element={<Project0003Page />} />
+          <Route path="/projects/project-0004" element={<Project0004Page />} />
+          <Route path="/projects/project-0005" element={<Project0005Page />} />
+          <Route path="/projects/project-0006" element={<Project0006Page />} />
           <Route path="/resume" element={<ResumePage />} />
         </Routes>
       </Box>

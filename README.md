@@ -17,9 +17,14 @@ I created a tool that creates UI verification tests from uploaded video. The too
 
 You can watch the video demon on YouTube here: Link
 
+## Perception-Based Object and Audio Event Detection Data Pipeline
+
+I built a tennis-video analysis tool that extracts frame-level perception features from uploaded video. The pipeline tracks the tennis ball visually and uses audio perception to detect frames where the ball was hit.
+
+The visual stage identifies likely tennis-ball candidates from color and shape features, while the audio stage scans for short, high-energy impact events that match the sound of a tennis-ball strike. The output combines ball-location markers with timestamped hit-frame markers for review in the demo UI.
+
 ## Previous Experiments
 
 Elevator Simulation (Java) - Link
 
 This is a discrete event simulator to demo the a few concepts of queuing theory.
-

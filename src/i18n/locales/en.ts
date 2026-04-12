@@ -3,10 +3,12 @@ const en = {
     home: 'Home',
     projects: 'Projects',
     resume: 'Resume',
-    project1: '2021 - Browser Extension to Visually Record Test Cases',
-    project2: '2024 - Webapp to Create Computer-Vision Test Cases from Video',
-    project3: '2026 - LLM Orchestration (Coming Soon)',
-    project4: '2026 - Perception-Based Object Detection Data Pipeline',
+    project1: 'Browser Extension to Visually Record Test Cases',
+    project2: 'Webapp to Create Computer-Vision Test Cases from Video',
+    project3: 'LLM Orchestration (Coming Soon)',
+    project4: 'Perception-Based Object and Audio Event Detection Data Pipeline',
+    project5: 'Project Placeholder 5',
+    project6: 'Project Placeholder 6',
   },
   common: {
     overview: 'Overview',
@@ -139,10 +141,20 @@ const en = {
     overviewPara2: 'Coming soon.',
   },
   project4: {
-    title: 'Perception-Based Object Detection Data Pipeline',
-    overviewPara1: 'I built a tool that analyzes uploaded video and runs an embedded data pipeline to extract features. In this demo, the pipeline identifies the location of a tennis ball in each frame. Users can inspect the detection results below the video, and when a ball is found, its position is highlighted with a red circle overlaid on the frame.',
-    overviewPara2: 'The detection process starts by applying a yellow mask to isolate regions with enough brightness and saturation. It then identifies connected blobs and selects the candidate that is most likely to represent a tennis ball based on size, compactness, fill ratio, aspect ratio, and circularity. The center of the highest-scoring candidate is returned as the detected position. When no candidate appears circular enough, the system falls back to the centroid of the largest yellow blob with lower confidence, ensuring it can still provide an approximate location.',
-    features: ['Computer Vision', 'Video processing', 'AI/ML feature extraction'],
+    title: 'Perception-Based Object and Audio Event Detection Data Pipeline',
+    overviewPara1: 'I built a tool that analyzes uploaded tennis video and runs an embedded multimodal data pipeline to extract frame-level features. In this demo, the pipeline identifies the location of a tennis ball in each frame and uses audio perception to detect the frames where the ball was hit. Users can inspect the detection results below the video: ball positions are highlighted with a red circle overlaid on the frame, while hit events are recorded as timestamped frame markers.',
+    overviewPara2: 'The visual detection process starts by applying a yellow mask to isolate regions with enough brightness and saturation. It then identifies connected blobs and selects the candidate that is most likely to represent a tennis ball based on size, compactness, fill ratio, aspect ratio, and circularity. In parallel, the audio detector scans the soundtrack for short, high-energy impact events that match the acoustic profile of a tennis ball strike, then maps those events back to the corresponding video frames.',
+    features: ['Computer Vision', 'Audio perception', 'Video processing', 'Audio event detection', 'AI/ML feature extraction'],
+  },
+  project5: {
+    title: 'Project Placeholder 5',
+    overviewPara1: 'This placeholder is reserved for a future demo.',
+    overviewPara2: 'Details will be added soon.',
+  },
+  project6: {
+    title: 'Project Placeholder 6',
+    overviewPara1: 'This placeholder is reserved for a future demo.',
+    overviewPara2: 'Details will be added soon.',
   },
 };
 
