@@ -3,7 +3,7 @@ import BuildIcon from '@mui/icons-material/Build';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import { useTranslation } from 'react-i18next';
 
-const techStack = ['Golang', 'Postgres', 'React', 'Computer Vision', 'Audio Perception', 'Swift', 'iOS', 'ffmpeg', 'SQLite'];
+const techStack = ['Golang', 'React', 'Computer Vision', 'Audio Perception', 'ffmpeg', 'SQLite'];
 
 export default function Project0004Page() {
   const { t } = useTranslation();
