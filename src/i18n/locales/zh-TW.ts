@@ -7,8 +7,8 @@ const zhTW = {
     project2: '從影片建立電腦視覺測試案例的網頁應用程式',
     project3: 'LLM 協調系統（即將推出）',
     project4: '基於感知的物件與音訊事件偵測資料管道',
-    project5: '預留專案 5',
-    project6: '預留專案 6',
+    project5: '（即將推出）程式碼重構示範',
+    project6: '（即將推出）投資分析示範',
   },
   common: {
     overview: '概述',
@@ -147,12 +147,12 @@ const zhTW = {
     features: ['電腦視覺', '音訊感知', '影片處理', '音訊事件偵測', 'AI/ML 特徵提取'],
   },
   project5: {
-    title: '預留專案 5',
+    title: '（即將推出）程式碼重構示範',
     overviewPara1: '這個預留頁面將用於之後的示範專案。',
     overviewPara2: '詳細內容將於稍後補上。',
   },
   project6: {
-    title: '預留專案 6',
+    title: '（即將推出）投資分析示範',
     overviewPara1: '這個預留頁面將用於之後的示範專案。',
     overviewPara2: '詳細內容將於稍後補上。',
   },

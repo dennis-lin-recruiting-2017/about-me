@@ -7,8 +7,8 @@ const en = {
     project2: 'Webapp to Create Computer-Vision Test Cases from Video',
     project3: 'LLM Orchestration (Coming Soon)',
     project4: 'Perception-Based Object and Audio Event Detection Data Pipeline',
-    project5: 'Project Placeholder 5',
-    project6: 'Project Placeholder 6',
+    project5: '(Coming Soon) Code Refactor Demo',
+    project6: '(Coming Soon) Investment Analysis Demo',
   },
   common: {
     overview: 'Overview',
@@ -152,7 +152,7 @@ const en = {
     overviewPara2: 'Details will be added soon.',
   },
   project6: {
-    title: 'Project Placeholder 6',
+    title: '(Coming Soon) Investment Analysis Demo',
     overviewPara1: 'This placeholder is reserved for a future demo.',
     overviewPara2: 'Details will be added soon.',
   },
