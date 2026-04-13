@@ -143,12 +143,12 @@ const en = {
   project4: {
     title: 'Perception-Based Object and Audio Event Detection Data Pipeline',
     overviewPara1: 'I built a tool that analyzes uploaded tennis video and runs an embedded multimodal data pipeline to extract frame-level features. In this demo, the pipeline identifies the location of a tennis ball in each frame and uses audio perception to detect the frames where the ball was hit. Users can inspect the detection results below the video: ball positions are highlighted with a red circle overlaid on the frame, while hit events are recorded as timestamped frame markers.',
-    overviewPara2: 'The visual detection process starts by applying a yellow mask to isolate regions with enough brightness and saturation. It then identifies connected blobs and selects the candidate that is most likely to represent a tennis ball based on size, compactness, fill ratio, aspect ratio, and circularity. In parallel, the audio detector scans the soundtrack for short, high-energy impact events that match the acoustic profile of a tennis ball strike, then maps those events back to the corresponding video frames.',
+    overviewPara2: 'The visual detection process starts by applying a yellow mask to isolate regions with enough brightness and saturation. It then identifies connected blobs and selects the candidate that is most likely to represent a tennis ball based on size, compactness, fill ratio, aspect ratio, and circularity. When multiple candidates are similarly plausible, the detector uses the ball location from previous frames as a continuity tie-breaker, favoring the candidate closest to the expected trajectory. In parallel, the audio detector scans the soundtrack for short, high-energy impact events that match the acoustic profile of a tennis ball strike, then maps those events back to the corresponding video frames. Because the sound has to travel from the point of impact to the camera microphone, the audio event can appear a few frames later than the visual strike.',
     features: ['Computer Vision', 'Audio perception', 'Video processing', 'Audio event detection', 'AI/ML feature extraction'],
   },
   project5: {
-    title: 'Project Placeholder 5',
-    overviewPara1: 'This placeholder is reserved for a future demo.',
+    title: '(Coming Soon) Code Refactor Demo',
+    overviewPara1: 'This placeholder is reserved code refactoring demo.',
     overviewPara2: 'Details will be added soon.',
   },
   project6: {

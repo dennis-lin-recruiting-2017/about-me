@@ -29,7 +29,7 @@ export default function Project0004Page() {
           <Box sx={{ position: 'relative', width: '100%', paddingTop: '56.25%', borderRadius: 1, overflow: 'hidden' }}>
             <Box
               component="iframe"
-              src="https://www.youtube.com/embed/JTzsljxE-NA"
+              src="https://www.youtube.com/embed/peEvGWjowuM?cc_load_policy=1"
               title={t('project4.title')}
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen

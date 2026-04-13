@@ -21,7 +21,7 @@ You can watch the video demon on YouTube here: Link
 
 I built a tennis-video analysis tool that extracts frame-level perception features from uploaded video. The pipeline tracks the tennis ball visually and uses audio perception to detect frames where the ball was hit.
 
-The visual stage identifies likely tennis-ball candidates from color and shape features, while the audio stage scans for short, high-energy impact events that match the sound of a tennis-ball strike. The output combines ball-location markers with timestamped hit-frame markers for review in the demo UI.
+The visual stage identifies likely tennis-ball candidates from color and shape features, using the ball location in previous frames to break ties between similarly plausible candidates and preserve trajectory continuity. The audio stage scans for short, high-energy impact events that match the sound of a tennis-ball strike. Because the sound has to travel from the point of impact to the camera microphone, the audio event can appear a few frames later than the visual strike. The output combines ball-location markers with timestamped hit-frame markers for review in the demo UI.
 
 ## Previous Experiments
 
